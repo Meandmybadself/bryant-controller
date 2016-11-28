@@ -10,8 +10,9 @@ What's the point in having an internet-controlled thermostat if it's controlled 
 
 ## Progress
 
-* Currently logging into dashboard.
-* Working through OAuth 1.0 flow by process of reverse-engineering Flash component.
+* 09-12-16: Currently logging into dashboard.
+* 11-28-16: OAuth signature working
+* In progress: reverse engineering the POST XML calls that set temperature
 
 ## Caveats
 

@@ -1,0 +1,1934 @@
+<config xmlns:atom="http://www.w3.org/2005/Atom"><atom:link rel="self" href="http://www.app-api.eng.bryant.com/systems/0414W000736/config"/>
+    <timestamp>2016-11-28T13:40:14Z</timestamp>
+    <mode>heat</mode>
+    <cfgem>F</cfgem>
+    <cfgauto>on</cfgauto>
+    <cfgtype>heatcool</cfgtype>
+    <cfgdead>2</cfgdead>
+    <cfgfan>on</cfgfan>
+    <cfgpgm>on</cfgpgm>
+    <blight>10</blight>
+    <screensaver>on</screensaver>
+    <sound>off</sound>
+    <filtrrmd>off</filtrrmd>
+    <uvrmd>on</uvrmd>
+    <humrmd>on</humrmd>
+    <ventrmd>on</ventrmd>
+    <cfgchgovr>30</cfgchgovr><cfgsimultheatcool/>
+    <cfgrecovery>on</cfgrecovery>
+    <cfgzoning>on</cfgzoning>
+    <cfghumid>on</cfghumid>
+    <cfgvent>off</cfgvent>
+    <cfguv>off</cfguv>
+    <erate>0.1</erate>
+    <grate>1.1</grate>
+    <vacat>off</vacat><vacstart/><vacend/>
+    <vacmint>60</vacmint>
+    <vacmaxt>80</vacmaxt>
+    <vacfan>off</vacfan>
+    <fueltype>gas</fueltype>
+    <gasunit>therm</gasunit>
+    <heatsource>system</heatsource>
+    <filtertype>air filter</filtertype>
+    <filterinterval>3</filterinterval>
+    <statpressmon>on</statpressmon>
+    <ventinterval>90</ventinterval>
+    <uvinterval>12</uvinterval>
+    <huminterval>12</huminterval>
+    <humidityfan>on</humidityfan>
+    <odtmpoff>0</odtmpoff>
+    <humoff>0</humoff>
+    <ducthour>13</ducthour><weatherPostalCode/>
+    <windowprotect>
+        <enabled>on</enabled>
+        <rhtg>9</rhtg>
+        <ventprotect>off</ventprotect>
+    </windowprotect>
+    <humidityHome>
+        <humid>manual</humid>
+        <rhtg>7</rhtg>
+        <rclg>4</rclg>
+        <rclgovercool>on</rclgovercool>
+        <humidifier>on</humidifier>
+        <venthtg>auto</venthtg>
+        <ventspdhtg>high</ventspdhtg>
+        <ventclg>auto</ventclg>
+        <ventspdclg>high</ventspdclg>
+    </humidityHome>
+    <humidityAway>
+        <humid>off</humid>
+        <rhtg>1</rhtg>
+        <rclg>15</rclg>
+        <rclgovercool>off</rclgovercool>
+        <humidifier>off</humidifier>
+        <venthtg>off</venthtg>
+        <ventspdhtg>high</ventspdhtg>
+        <ventclg>off</ventclg>
+        <ventspdclg>high</ventspdclg>
+    </humidityAway>
+    <humidityVacation>
+        <rhtg>1</rhtg>
+        <rclg>15</rclg>
+        <rclgovercool>off</rclgovercool>
+        <humidifier>off</humidifier>
+        <venthtg>off</venthtg>
+        <ventspdhtg>high</ventspdhtg>
+        <ventclg>off</ventclg>
+        <ventspdclg>high</ventspdclg>
+    </humidityVacation>
+    <utilityEvent>
+        <enabled>false</enabled>
+        <priceResp>absolute</priceResp>
+        <priceLimit>0</priceLimit>
+        <priceOffset>4</priceOffset>
+        <priceHtAbs>60</priceHtAbs>
+        <priceClAbs>82</priceClAbs>
+        <demandResp>absolute</demandResp>
+        <demandOffset>4</demandOffset>
+        <demandHtAbs>60</demandHtAbs>
+        <demandClAbs>82</demandClAbs>
+        <minLimit>50</minLimit>
+        <maxLimit>90</maxLimit>
+        <restoreDefaults>off</restoreDefaults>
+    </utilityEvent>
+    <wholeHouse>
+        <holdActivity>none</holdActivity>
+        <hold>off</hold><otmr/>
+        <activities>
+            <activity id="wake">
+                <blight>10</blight>
+            </activity>
+            <activity id="away">
+                <blight>10</blight>
+            </activity>
+            <activity id="home">
+                <blight>10</blight>
+            </activity>
+            <activity id="sleep">
+                <blight>10</blight>
+            </activity>
+            <activity id="manual">
+                <blight>10</blight>
+            </activity>
+        </activities>
+    </wholeHouse><timeAndDate/>
+    <zones>
+        <zone id="1">
+            <name>ZONE 1</name>
+            <enabled>on</enabled>
+            <holdActivity>manual</holdActivity>
+            <hold>on</hold><otmr/>
+            <setback>on</setback>
+            <airflowlimit>high</airflowlimit>
+            <cfmlimit>3937</cfmlimit>
+            <tempoffset>0</tempoffset>
+            <activities>
+                <activity id="away">
+                    <htsp>63</htsp>
+                    <clsp>84</clsp>
+                    <fan>low</fan>
+                </activity>
+                <activity id="wake">
+                    <htsp>68</htsp>
+                    <clsp>77</clsp>
+                    <fan>low</fan>
+                </activity>
+                <activity id="sleep">
+                    <htsp>63</htsp>
+                    <clsp>76</clsp>
+                    <fan>low</fan>
+                </activity>
+                <activity id="home">
+                    <htsp>68</htsp>
+                    <clsp>76</clsp>
+                    <fan>low</fan>
+                </activity>
+                <activity id="manual">
+                    <htsp>68</htsp>
+                    <clsp>75</clsp>
+                    <fan>med</fan>
+                </activity>
+            </activities>
+            <program>
+                <day id="Sunday">
+                    <period id="1">
+                        <activity>wake</activity>
+                        <time>08:30</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>home</activity>
+                        <time>10:30</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>sleep</activity>
+                        <time>23:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>home</activity>
+                        <time>00:00</time>
+                        <enabled>off</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>home</activity>
+                        <time>00:00</time>
+                        <enabled>off</enabled>
+                    </period>
+                </day>
+                <day id="Monday">
+                    <period id="1">
+                        <activity>wake</activity>
+                        <time>06:45</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>home</activity>
+                        <time>00:00</time>
+                        <enabled>off</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>away</activity>
+                        <time>08:30</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>home</activity>
+                        <time>18:30</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>23:45</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Tuesday">
+                    <period id="1">
+                        <activity>wake</activity>
+                        <time>06:45</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>home</activity>
+                        <time>00:00</time>
+                        <enabled>off</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>away</activity>
+                        <time>08:30</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>home</activity>
+                        <time>18:30</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>23:45</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Wednesday">
+                    <period id="1">
+                        <activity>wake</activity>
+                        <time>06:45</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>home</activity>
+                        <time>00:00</time>
+                        <enabled>off</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>away</activity>
+                        <time>08:30</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>home</activity>
+                        <time>18:30</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>23:45</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Thursday">
+                    <period id="1">
+                        <activity>wake</activity>
+                        <time>06:45</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>home</activity>
+                        <time>00:00</time>
+                        <enabled>off</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>away</activity>
+                        <time>08:30</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>home</activity>
+                        <time>18:30</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>23:45</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Friday">
+                    <period id="1">
+                        <activity>wake</activity>
+                        <time>06:45</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>home</activity>
+                        <time>00:00</time>
+                        <enabled>off</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>away</activity>
+                        <time>08:30</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>home</activity>
+                        <time>18:30</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>23:45</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Saturday">
+                    <period id="1">
+                        <activity>wake</activity>
+                        <time>08:30</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>home</activity>
+                        <time>10:30</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>sleep</activity>
+                        <time>23:45</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>home</activity>
+                        <time>00:00</time>
+                        <enabled>off</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>home</activity>
+                        <time>00:00</time>
+                        <enabled>off</enabled>
+                    </period>
+                </day>
+            </program>
+        </zone>
+        <zone id="2">
+            <name>Zone 2</name>
+            <enabled>off</enabled><holdActivity/>
+            <hold>off</hold><otmr/>
+            <setback>on</setback>
+            <airflowlimit>high</airflowlimit>
+            <cfmlimit>0</cfmlimit>
+            <tempoffset>0</tempoffset>
+            <activities>
+                <activity id="home">
+                    <htsp>68</htsp>
+                    <clsp>76</clsp>
+                    <fan>off</fan>
+                </activity>
+                <activity id="away">
+                    <htsp>60</htsp>
+                    <clsp>80</clsp>
+                    <fan>off</fan>
+                </activity>
+                <activity id="sleep">
+                    <htsp>68</htsp>
+                    <clsp>76</clsp>
+                    <fan>off</fan>
+                </activity>
+                <activity id="wake">
+                    <htsp>68</htsp>
+                    <clsp>76</clsp>
+                    <fan>off</fan>
+                </activity>
+                <activity id="manual">
+                    <htsp>68</htsp>
+                    <clsp>76</clsp>
+                    <fan>off</fan>
+                </activity>
+            </activities>
+            <program>
+                <day id="Sunday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Monday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Tuesday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Wednesday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Thursday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Friday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Saturday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+            </program>
+        </zone>
+        <zone id="3">
+            <name>Zone 3</name>
+            <enabled>off</enabled><holdActivity/>
+            <hold>off</hold><otmr/>
+            <setback>on</setback>
+            <airflowlimit>high</airflowlimit>
+            <cfmlimit>0</cfmlimit>
+            <tempoffset>0</tempoffset>
+            <activities>
+                <activity id="home">
+                    <htsp>68</htsp>
+                    <clsp>76</clsp>
+                    <fan>off</fan>
+                </activity>
+                <activity id="away">
+                    <htsp>60</htsp>
+                    <clsp>80</clsp>
+                    <fan>off</fan>
+                </activity>
+                <activity id="sleep">
+                    <htsp>68</htsp>
+                    <clsp>76</clsp>
+                    <fan>off</fan>
+                </activity>
+                <activity id="wake">
+                    <htsp>68</htsp>
+                    <clsp>76</clsp>
+                    <fan>off</fan>
+                </activity>
+                <activity id="manual">
+                    <htsp>68</htsp>
+                    <clsp>76</clsp>
+                    <fan>off</fan>
+                </activity>
+            </activities>
+            <program>
+                <day id="Sunday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Monday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Tuesday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Wednesday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Thursday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Friday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Saturday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+            </program>
+        </zone>
+        <zone id="4">
+            <name>Zone 4</name>
+            <enabled>off</enabled><holdActivity/>
+            <hold>off</hold><otmr/>
+            <setback>on</setback>
+            <airflowlimit>high</airflowlimit>
+            <cfmlimit>0</cfmlimit>
+            <tempoffset>0</tempoffset>
+            <activities>
+                <activity id="home">
+                    <htsp>68</htsp>
+                    <clsp>76</clsp>
+                    <fan>off</fan>
+                </activity>
+                <activity id="away">
+                    <htsp>60</htsp>
+                    <clsp>80</clsp>
+                    <fan>off</fan>
+                </activity>
+                <activity id="sleep">
+                    <htsp>68</htsp>
+                    <clsp>76</clsp>
+                    <fan>off</fan>
+                </activity>
+                <activity id="wake">
+                    <htsp>68</htsp>
+                    <clsp>76</clsp>
+                    <fan>off</fan>
+                </activity>
+                <activity id="manual">
+                    <htsp>68</htsp>
+                    <clsp>76</clsp>
+                    <fan>off</fan>
+                </activity>
+            </activities>
+            <program>
+                <day id="Sunday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Monday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Tuesday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Wednesday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Thursday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Friday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Saturday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+            </program>
+        </zone>
+        <zone id="5">
+            <name>Zone 5</name>
+            <enabled>off</enabled><holdActivity/>
+            <hold>off</hold><otmr/>
+            <setback>on</setback>
+            <airflowlimit>high</airflowlimit>
+            <cfmlimit>0</cfmlimit>
+            <tempoffset>0</tempoffset>
+            <activities>
+                <activity id="home">
+                    <htsp>68</htsp>
+                    <clsp>76</clsp>
+                    <fan>off</fan>
+                </activity>
+                <activity id="away">
+                    <htsp>60</htsp>
+                    <clsp>80</clsp>
+                    <fan>off</fan>
+                </activity>
+                <activity id="sleep">
+                    <htsp>68</htsp>
+                    <clsp>76</clsp>
+                    <fan>off</fan>
+                </activity>
+                <activity id="wake">
+                    <htsp>68</htsp>
+                    <clsp>76</clsp>
+                    <fan>off</fan>
+                </activity>
+                <activity id="manual">
+                    <htsp>68</htsp>
+                    <clsp>76</clsp>
+                    <fan>off</fan>
+                </activity>
+            </activities>
+            <program>
+                <day id="Sunday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Monday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Tuesday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Wednesday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Thursday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Friday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Saturday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+            </program>
+        </zone>
+        <zone id="6">
+            <name>Zone 6</name>
+            <enabled>off</enabled><holdActivity/>
+            <hold>off</hold><otmr/>
+            <setback>on</setback>
+            <airflowlimit>high</airflowlimit>
+            <cfmlimit>0</cfmlimit>
+            <tempoffset>0</tempoffset>
+            <activities>
+                <activity id="home">
+                    <htsp>68</htsp>
+                    <clsp>76</clsp>
+                    <fan>off</fan>
+                </activity>
+                <activity id="away">
+                    <htsp>60</htsp>
+                    <clsp>80</clsp>
+                    <fan>off</fan>
+                </activity>
+                <activity id="sleep">
+                    <htsp>68</htsp>
+                    <clsp>76</clsp>
+                    <fan>off</fan>
+                </activity>
+                <activity id="wake">
+                    <htsp>68</htsp>
+                    <clsp>76</clsp>
+                    <fan>off</fan>
+                </activity>
+                <activity id="manual">
+                    <htsp>68</htsp>
+                    <clsp>76</clsp>
+                    <fan>off</fan>
+                </activity>
+            </activities>
+            <program>
+                <day id="Sunday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Monday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Tuesday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Wednesday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Thursday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Friday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Saturday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+            </program>
+        </zone>
+        <zone id="7">
+            <name>Zone 7</name>
+            <enabled>off</enabled><holdActivity/>
+            <hold>off</hold><otmr/>
+            <setback>on</setback>
+            <airflowlimit>high</airflowlimit>
+            <cfmlimit>0</cfmlimit>
+            <tempoffset>0</tempoffset>
+            <activities>
+                <activity id="home">
+                    <htsp>68</htsp>
+                    <clsp>76</clsp>
+                    <fan>off</fan>
+                </activity>
+                <activity id="away">
+                    <htsp>60</htsp>
+                    <clsp>80</clsp>
+                    <fan>off</fan>
+                </activity>
+                <activity id="sleep">
+                    <htsp>68</htsp>
+                    <clsp>76</clsp>
+                    <fan>off</fan>
+                </activity>
+                <activity id="wake">
+                    <htsp>68</htsp>
+                    <clsp>76</clsp>
+                    <fan>off</fan>
+                </activity>
+                <activity id="manual">
+                    <htsp>68</htsp>
+                    <clsp>76</clsp>
+                    <fan>off</fan>
+                </activity>
+            </activities>
+            <program>
+                <day id="Sunday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Monday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Tuesday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Wednesday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Thursday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Friday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Saturday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+            </program>
+        </zone>
+        <zone id="8">
+            <name>Zone 8</name>
+            <enabled>off</enabled><holdActivity/>
+            <hold>off</hold><otmr/>
+            <setback>on</setback>
+            <airflowlimit>high</airflowlimit>
+            <cfmlimit>0</cfmlimit>
+            <tempoffset>0</tempoffset>
+            <activities>
+                <activity id="home">
+                    <htsp>68</htsp>
+                    <clsp>76</clsp>
+                    <fan>off</fan>
+                </activity>
+                <activity id="away">
+                    <htsp>60</htsp>
+                    <clsp>80</clsp>
+                    <fan>off</fan>
+                </activity>
+                <activity id="sleep">
+                    <htsp>68</htsp>
+                    <clsp>76</clsp>
+                    <fan>off</fan>
+                </activity>
+                <activity id="wake">
+                    <htsp>68</htsp>
+                    <clsp>76</clsp>
+                    <fan>off</fan>
+                </activity>
+                <activity id="manual">
+                    <htsp>68</htsp>
+                    <clsp>76</clsp>
+                    <fan>off</fan>
+                </activity>
+            </activities>
+            <program>
+                <day id="Sunday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Monday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Tuesday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Wednesday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Thursday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Friday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+                <day id="Saturday">
+                    <period id="1">
+                        <activity>home</activity>
+                        <time>06:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="2">
+                        <activity>away</activity>
+                        <time>08:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="3">
+                        <activity>home</activity>
+                        <time>17:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="4">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                    <period id="5">
+                        <activity>sleep</activity>
+                        <time>22:00</time>
+                        <enabled>on</enabled>
+                    </period>
+                </day>
+            </program>
+        </zone>
+    </zones>
+</config>
