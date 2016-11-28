@@ -1,7 +1,7 @@
 #Bryant-Controller
 
 ## Overview
-What's the point in having an internet-controlled thermostat if it's controlled via a closed & archaic infrastructure?
+What's the point in having an internet-controlled thermostat if it's controlled via a closed & archaic infrastructure (Flash)?
 
 ## Build notes
 * System expects the environment variables to be defined –
@@ -9,7 +9,7 @@ What's the point in having an internet-controlled thermostat if it's controlled 
   * _BRYANT_PASSWORD_
 
 ## Progress
- 
+
 * Currently logging into dashboard.
 * Working through OAuth 1.0 flow by process of reverse-engineering Flash component.
 
